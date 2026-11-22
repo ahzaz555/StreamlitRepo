@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+langchain-core
+langchain-google-genai==4.3.7
+google-genai>=2.12.1,<3
