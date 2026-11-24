@@ -16,7 +16,7 @@ from reportlab.platypus import (
 
 def create_pdf_report(df):
 
-    # Dataset statistics
+
     cleaned_df = df.drop_duplicates()
 
     original_rows = len(df)
@@ -84,7 +84,7 @@ def create_pdf_report(df):
         "Data Science Project Report"
     )
 
-    # Introduction
+
     add_text(
         "This project looks at hotel booking cancellations and the "
         "factors that may be related to them. I used the Hotel Booking "
@@ -96,9 +96,6 @@ def create_pdf_report(df):
 
     content.append(Spacer(1, 10))
 
-    # ---------------------------------------
-    # 1. Dataset Overview
-    # ---------------------------------------
 
     add_heading("1. Dataset Overview")
 
@@ -119,10 +116,6 @@ def create_pdf_report(df):
     ]
 
     add_table(overview_data, [150, 150, 170])
-
-    # ---------------------------------------
-    # 2. Statistical Analysis
-    # ---------------------------------------
 
     add_heading("2. Statistical Analysis")
 
@@ -156,10 +149,6 @@ def create_pdf_report(df):
         "102.00). Both tests gave p-values below 0.001, indicating "
         "statistically significant differences."
     )
-
-    # ---------------------------------------
-    # 3. Data Cleaning
-    # ---------------------------------------
 
     add_heading("3. Data Cleaning and Preprocessing")
 
@@ -195,10 +184,6 @@ def create_pdf_report(df):
     )
 
     content.append(PageBreak())
-
-    # ---------------------------------------
-    # 4. Machine Learning Models
-    # ---------------------------------------
 
     add_heading("4. Machine Learning Models and Evaluation")
 
@@ -250,9 +235,6 @@ def create_pdf_report(df):
         "because identifying cancellations was the main goal."
     )
 
-    # ---------------------------------------
-    # 5. Final Test Evaluation
-    # ---------------------------------------
 
     add_heading("5. Final Held-Out Test Evaluation")
 
@@ -302,10 +284,6 @@ def create_pdf_report(df):
 
     content.append(PageBreak())
 
-    # ---------------------------------------
-    # 6. Streamlit and LangChain
-    # ---------------------------------------
-
     add_heading("6. Streamlit and LangChain Implementation")
 
     add_text(
@@ -342,9 +320,6 @@ def create_pdf_report(df):
         "explanation rather than a calculation from the chart."
     )
 
-    # ---------------------------------------
-    # 7. Discussion and Conclusion
-    # ---------------------------------------
 
     add_heading("7. Discussion and Conclusion")
 
@@ -381,10 +356,6 @@ def create_pdf_report(df):
     )
 
    
-
-    # ---------------------------------------
-    # 9. GitHub Repository - Keep this last
-    # ---------------------------------------
 
     add_heading("9. Source Code")
 
